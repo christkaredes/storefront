@@ -1,4 +1,4 @@
-<h1 class="w3-text-red" style="text-shadow:1px 1px 0 #444">Store#index</h1>
+<h1 class="w3-text-red" style="text-shadow:1px 1px 0 #444">Ruby Store</h1>
 <p>Find me in app/views/store/index.html.erb</p>
 
 <table class="w3-table-all">
@@ -19,8 +19,9 @@
         <td><%= image_tag(product.image_url) %></td>
         <td>
           <%= number_to_currency(product.price) %>
+          <%= button_to 'Add to Cart', line_items_path(product_id: product), class:"w3-button w3-round w3-deep-orange" %>
           <hr />
-          <%= link_to 'Add to Cart', product , class:"w3-button w3-light-gray w3-border w3-border-blue" %></td>
+          </td>
       </tr>
     <% end %>
   </tbody>
