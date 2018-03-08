@@ -20,11 +20,20 @@
 
 <tr>
 <td>
-<%= link_to 'Edit', edit_cart_path(@cart) , class:"w3-button w3-round w3-deep-orange" %> 
+<%= button_to 'Empty cart', @cart, method: :delete, data: { confirm: 'Are you sure?' }, class:"w3-button w3-round w3-deep-orange" %>
+
 </td>
+  
 <td>
-<%= link_to 'Back', carts_path , class:"w3-button w3-round w3-deep-orange" %>
+<%= link_to 'Keep Shopping', carts_path , class:"w3-button w3-round w3-deep-orange" %>
+  
 </td>
+  
+</tr>
+  <tr><td><%= button_to "Checkout", new_order_path, method: :get, class:"w3-button w3-round w3-deep-orange" %></td>
+
+<td></td>
+
 </tr>
 </tbody>
 </table>
