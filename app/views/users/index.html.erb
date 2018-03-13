@@ -14,9 +14,9 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.name %></td>
-        <td><%= link_to 'Show', user , class:"w3-button w3-light-gray" %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) , class:"w3-button w3-light-gray" %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } , class:"w3-button w3-light-gray" %></td>
+        <td><%= link_to 'Show', user , class:"w3-button w3-deep-orange w3-round" %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) , class:"w3-button w3-deep-orange w3-round" %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } , class:"w3-button w3-deep-orange w3-round" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path , class:"w3-button w3-light-gray" %>
+<%= link_to 'New User', new_user_path , class:"w3-button w3-deep-orange w3-round" %>
